@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dictation Uploader UI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+	<div id="ui-content">
+		<div id="feedback-container">
+			<div id="timer-container">
+				<span id="timer-label"></span>
+				<!-- <span hidden="true" id="timer">Recording - 00:00:00</span> -->
+				<span hidden="true" id="timer"></span>
+			</div>
+		</div>
+		<div id="menu-container">
+			<div id="button-container">
+				<div class="mic-button" id="record-button" title="Start recording"></div>
+				<div class="mic-button" id="pause-button" title="Pause recording"></div>
+				<div class="mic-button" id="resume-button" title="Resume recording"></div>
+				<div class="mic-button" id="stop-button" title="Stop recording"></div>
+			</div>
+			<div id="button-label-container">
+				<p id="record-button-label">Start Recording</p>
+				<p id="pause-button-label">Pause Recording</p>
+				<p id="resume-button-label">Resume Recording</p>
+				<p id="stop-button-label">Stop Recording</p>
+			</div>
+		</div>
+		<!--
+		<div class="switch-box">
+			<span>Turn on testing mode</span>
+			<label class="switch">
+				<input id="testing-checkbox" type="checkbox">
+				<span title="Toggle testing/production modes" class="slider round"></span>
+			</label>
+		</div>
+		-->
+	</div>
+	<script type="text/javascript" src="{{ url_for('static', filename='buttons.js') }}"></script>
+</body>
+</html>
